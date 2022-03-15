@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testClasses.VerifyLoginTabs">
+        <methods>
+          <include name="lauchBrowser"/>
+          <include name="CreateObjectsOfPOMClasses"/>
+          <include name="lauchTheApplication"/>
+          <include name="closeBrowser"/>
+          <include name="gotoHomePage"/>
+          <include name="verifyBankManagerLoginButton"/>
+          <include name="verifyCustomerLoginButton"/>
+          <include name="clearPOMObjects"/>
+        </methods>
+      </class> <!-- testClasses.VerifyLoginTabs -->
+      <class name="testClasses.VerifyAllTabsComesUnderBankManager">
+        <methods>
+          <include name="lauchTheApplication"/>
+          <include name="clearPOmObjects"/>
+          <include name="lauchBrowser"/>
+          <include name="gotoHomePage"/>
+          <include name="closeBrowser"/>
+          <include name="createObjectsOfPOMClasses"/>
+          <include name="verifyAddCustomerTab"/>
+          <include name="verifyOpenAccountTab"/>
+          <include name="verifyCustomersTab"/>
+        </methods>
+      </class> <!-- testClasses.VerifyAllTabsComesUnderBankManager -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="2" parallel="classes" name="OperaTest(failed)">
+    <parameter name="browser" value="Opera"/>
+    <classes>
+      <class name="testClasses.VerifyAllTabsComesUnderBankManager">
+        <methods>
+          <include name="lauchTheApplication"/>
+          <include name="clearPOmObjects"/>
+          <include name="lauchBrowser"/>
+          <include name="gotoHomePage"/>
+          <include name="closeBrowser"/>
+          <include name="createObjectsOfPOMClasses"/>
+          <include name="verifyCustomersTab"/>
+        </methods>
+      </class> <!-- testClasses.VerifyAllTabsComesUnderBankManager -->
+    </classes>
+  </test> <!-- OperaTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
